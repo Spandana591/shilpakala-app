@@ -1,0 +1,45 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Artisan user profile",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "artisanType": { "type": "string" },
+        "profileImage": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Product item created by artisan",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "woodType": { "type": "string" },
+        "price": { "type": "number" },
+        "description": { "type": "string" },
+        "artisanName": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "brandedImageUrl": { "type": "string" },
+        "timestamp": { "type": "number" },
+        "ownerId": { "type": "string" }
+      },
+      "required": ["id", "name", "ownerId"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Collection of artisan profiles"
+    },
+    "/products/{productId}": {
+      "schema": "Product",
+      "description": "Collection of branded products"
+    }
+  }
+}
