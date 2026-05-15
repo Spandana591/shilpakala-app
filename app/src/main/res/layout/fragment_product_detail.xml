@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFBF7">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="#5D4037" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="120dp">
+
+            <!-- Hero Image Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="8dp"
+                app:strokeWidth="0dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ivProductMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        tools:src="@drawable/bg_circle_logout" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/gradient_overlay" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:id="@+id/tvCategoryTag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_rounded_status"
+                            android:paddingHorizontal="14dp"
+                            android:paddingVertical="6dp"
+                            android:text="CHANNAPATNA"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:backgroundTint="#8D6E63"/>
+
+                        <TextView
+                            android:id="@+id/tvProductNameMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Heritage Lacware Horse"
+                            android:textColor="@color/white"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btnFavorite"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_gravity="top|end"
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="28dp"
+                        app:cardElevation="4dp"
+                        app:cardBackgroundColor="#CCFFFFFF">
+                        <ImageView
+                            android:id="@+id/ivFavorite"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:src="@android:drawable/btn_star_big_off" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Details Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="24dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/tvPriceMain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹ 1,250"
+                        android:textColor="#5D4037"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAvailability"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:text="In Stock"
+                        android:textColor="#43A047"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <!-- Product Attributes Grid -->
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    app:columnCount="2"
+                    app:alignmentMode="alignMargins">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        app:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:background="#F5F1E9"
+                        android:layout_margin="4dp"
+                        android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MATERIALS" android:textSize="10sp" android:textColor="#A1887F" app:textAllCaps="true" />
+                        <TextView android:id="@+id/tvMaterials" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ivory Wood" android:textColor="#5D4037" android:textStyle="bold" android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        app:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:background="#F5F1E9"
+                        android:layout_margin="4dp"
+                        android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LOCATION" android:textSize="10sp" android:textColor="#A1887F" app:textAllCaps="true" />
+                        <TextView android:id="@+id/tvLocation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Channapatna" android:textColor="#5D4037" android:textStyle="bold" android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        app:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:background="#F5F1E9"
+                        android:layout_margin="4dp"
+                        android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CRAFT TYPE" android:textSize="10sp" android:textColor="#A1887F" app:textAllCaps="true" />
+                        <TextView android:id="@+id/tvCraftType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lacware" android:textColor="#5D4037" android:textStyle="bold" android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        app:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:background="#F5F1E9"
+                        android:layout_margin="4dp"
+                        android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="UPLOADED" android:textSize="10sp" android:textColor="#A1887F" app:textAllCaps="true" />
+                        <TextView android:id="@+id/tvUploadDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="May 2026" android:textColor="#5D4037" android:textStyle="bold" android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                </androidx.gridlayout.widget.GridLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="The Artisan's Story"
+                    android:textColor="#5D4037"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDescriptionMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="6dp"
+                    android:text="This piece is a testament to the centuries-old heritage craft of Channapatna. Every stroke and curve is handcrafted with precision, using non-toxic natural dyes and sustainably sourced ivory wood."
+                    android:textColor="#6D4C41"
+                    android:textSize="17sp" />
+
+                <!-- Artisan Profile card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    app:cardCornerRadius="28dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1.5dp"
+                    app:strokeColor="#EFEBE9"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cvArtisanImage"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                app:cardCornerRadius="36dp"
+                                app:cardElevation="0dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@android:drawable/ic_menu_myplaces"
+                                    app:tint="#8D6E63"
+                                    android:padding="16dp"
+                                    android:background="#F5F1E9" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/cvArtisanImage"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="20dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/tvArtisanNameMain"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ramu Artisan"
+                                    android:textColor="#5D4037"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/tvArtisanLocationMain"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mysuru, Karnataka"
+                                    android:textColor="#A1887F"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvArtisanBio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:text="A master craftsman with over 30 years of experience in woodcraft, bringing traditional stories to life through his art."
+                            android:textColor="#795548"
+                            android:textSize="15sp"
+                            android:fontStyle="italic" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            android:gap="12dp">
+                            
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnWhatsApp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="60dp"
+                                android:text="WhatsApp Artisan"
+                                app:icon="@android:drawable/stat_notify_chat"
+                                app:cornerRadius="16dp"
+                                android:backgroundTint="#25D366"
+                                android:textColor="@color/white" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnShareMain"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginStart="12dp"
+                                android:padding="0dp"
+                                app:icon="@android:drawable/ic_menu_share"
+                                app:iconGravity="textStart"
+                                app:iconPadding="0dp"
+                                app:iconTint="#5D4037"
+                                app:cornerRadius="16dp"
+                                app:strokeColor="#EFEBE9" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cardElevation="24dp"
+        app:cardCornerRadius="0dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:strokeWidth="1dp"
+        app:strokeColor="#F5F1E9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnInterestedToBuy"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text="Express Interest to Buy"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="18dp"
+                android:backgroundTint="#8D6E63"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
