@@ -2,7 +2,7 @@
 
 # Shilpakala App
 
-A web application developed to showcase Karnataka’s traditional arts and handicrafts through a modern digital platform.
+The app application developed to showcase Karnataka’s traditional arts and handicrafts through a modern digital platform.
 
 ## Features
 
