@@ -2,7 +2,12 @@
 
 # Shilpakala App
 
-The app application developed to showcase Karnataka’s traditional arts and handicrafts through a modern digital platform.
+The app application developed to showcase Karnataka’s traditional arts and handicrafts through a modern digital platform. 
+
+# Problem Statement
+Wood carvers and "Gombe" makers in places like Channapatna and Kinnala have great skills but struggle 
+with "Product Photography." Their photos on WhatsApp look dull, which makes their high-quality work 
+look "Cheap" to city buyers. 
 
 ## Features
 
@@ -25,6 +30,7 @@ The app application developed to showcase Karnataka’s traditional arts and han
 ## Project Goal
 
 The goal of this project is to digitally promote Karnataka’s traditional crafts and support local artisans through technology.
+
 ## App Screenshots
 
 ### Collection Page
@@ -46,6 +52,18 @@ The goal of this project is to digitally promote Karnataka’s traditional craft
 ![Profile Page](https://raw.githubusercontent.com/Spandana591/shilpakala-app/main/images/profile%20page.png)
 
 
+# Instalation steps
+
+
+- Open Android Studio
+- Click Open
+- Select project folder
+- Wait for Gradle Sync
+- Run Application
+- Start emulator or connect Android device
+- Click ▶ Run button
+
+
 ## Run Locally
 
 **Prerequisites:**  Node.js
@@ -56,4 +74,13 @@ The goal of this project is to digitally promote Karnataka’s traditional craft
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+# Future Improvements
+- Future Improvements
+- Add online payment integration
+- Add user authentication
+- Add shopping cart functionality
+- Add search and filter options
+- Add multilingual support
+- Add admin dashboard for artisans
    
